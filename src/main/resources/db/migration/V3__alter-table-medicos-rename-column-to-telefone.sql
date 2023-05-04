@@ -1,0 +1,1 @@
+alter table medicos rename column telefon to telefone;
