@@ -1,12 +1,13 @@
 package med.voll.api.endereco;
 
-import lombok.Builder;
-import lombok.ToString;
+import lombok.*;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
-@Builder
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @ToString
 public class DadosEndereco {
 
