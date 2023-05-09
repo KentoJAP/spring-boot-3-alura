@@ -1,11 +1,9 @@
-package med.voll.api.paciente;
+package med.voll.api.domain.paciente;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.endereco.Endereco;
-
-import javax.persistence.Embedded;
+import med.voll.api.domain.endereco.Endereco;
 
 @Getter
 @AllArgsConstructor

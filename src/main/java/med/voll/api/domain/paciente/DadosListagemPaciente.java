@@ -1,12 +1,9 @@
-package med.voll.api.paciente;
+package med.voll.api.domain.paciente;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import med.voll.api.medico.DadosListagemMedico;
-
-import javax.validation.constraints.NotNull;
 
 @Getter
 @AllArgsConstructor
