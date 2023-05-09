@@ -8,6 +8,7 @@ import lombok.ToString;
 import med.voll.api.endereco.DadosEndereco;
 import med.voll.api.endereco.Endereco;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 @Getter
@@ -20,6 +21,6 @@ public class DadosAtualizacaoMedico {
     Long id;
     String nome;
     String telefone;
-    DadosEndereco endereco;
+    @Valid DadosEndereco endereco;
 
 }
