@@ -23,10 +23,8 @@ public class Paciente {
     private String email;
     private String telefone;
     private String cpf;
-
     @Embedded
     private Endereco endereco;
-
     private Boolean ativo;
 
     public Paciente(DadosCadastroPaciente dados) {
