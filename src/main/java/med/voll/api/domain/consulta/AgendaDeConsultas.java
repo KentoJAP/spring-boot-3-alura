@@ -31,7 +31,7 @@ public class AgendaDeConsultas {
         var paciente = pacienteRepository.getReferenceById(dados.getIdPaciente());
         //var medico = medicoRepository.findById(dados.getIdMedico()).get();
         var medico = escolherMedico(dados);
-        var consulta = new Consulta(null, paciente, medico, dados.getData());
+        var consulta = new Consulta(null, paciente, medico, dados.getData(), null);
 
         consultaRepository.save(consulta);
     }
@@ -45,5 +45,15 @@ public class AgendaDeConsultas {
             throw new ValidacaoNegada("A especialidade é obrigatória quando não há médico");
         }
         return medicoRepository.getReferenceById(dados.getIdMedico());
+    }
+
+    public void cancelar(DadosCancelamentoConsulta dados) {
+
+        if(!consultaRepository.existsById(dados.getIdConsulta())){
+            throw new ValidacaoNegada("O id da consulta não existe.");
+        }
+
+        var consulta = consultaRepository.getReferenceById(dados.getIdConsulta());
+        consulta.cancelar(dados.getMotivo());
     }
 }
