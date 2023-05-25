@@ -15,14 +15,14 @@ import java.time.LocalDateTime;
 public class DadosDetalhamentoConsulta {
 
     private Long id;
-    private Paciente paciente;
-    private Medico medico;
+    private Long paciente;
+    private Long medico;
     private LocalDateTime data;
 
     public DadosDetalhamentoConsulta(Consulta consulta){
         this.id = consulta.getId();
-        this.paciente = consulta.getPaciente();
-        this.medico = consulta.getMedico();
+        this.paciente = consulta.getPaciente().getId();
+        this.medico = consulta.getMedico().getId();
         this.data = consulta.getData();
     }
 

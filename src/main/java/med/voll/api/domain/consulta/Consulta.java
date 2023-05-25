@@ -3,6 +3,8 @@ package med.voll.api.domain.consulta;
 import lombok.*;
 import med.voll.api.domain.medico.Medico;
 import med.voll.api.domain.paciente.Paciente;
+import med.voll.api.domain.paciente.PacienteRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 import javax.validation.Valid;
@@ -29,9 +31,6 @@ public class Consulta {
     @Column(name = "motivo_cancelamento")
     @Enumerated(EnumType.STRING)
     private MotivoCancelamento motivo;
-    public Consulta(DadosAgendamentoConsulta dados){
-
-    }
 
     public void cancelar(MotivoCancelamento motivo) {
         this.motivo = motivo;
